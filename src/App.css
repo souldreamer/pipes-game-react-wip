@@ -1,0 +1,142 @@
+.App {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+.App-logo {
+	animation: App-logo-spin infinite 20s linear;
+	height: 80px;
+}
+
+.App-header {
+	background-color: #222;
+/*	height: 150px;*/
+	padding: 20px;
+	color: white;
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+
+.App-intro {
+	font-size: large;
+}
+
+@keyframes App-logo-spin {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
+
+.Board-container {
+	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url(http://www.texturex.com/albums/Metal-Textures/TextureX%20steel%20texture%20shiney%20piece%20metal%20silver%20camo%20pattern%20Texture.jpg);
+	background-size: cover;
+}
+
+.Board {
+	font-size: 0;
+}
+
+.Board-row {
+
+}
+
+.Board-element {
+
+}
+
+.sprite {
+	display: inline-block;
+	width: 48px;
+	height: 48px;
+	background-image: url('/pipes.png');
+}
+.sprite-plus {
+	background-position: 0 0;
+}
+.sprite-t1 {
+	background-position: -48px 0;
+}
+.sprite-t2 {
+	background-position: -96px 0;
+}
+.sprite-t3 {
+	background-position: -144px 0;
+}
+.sprite-t4 {
+	background-position: -192px 0;
+}
+.sprite-u2 {
+	background-position: -240px 0;
+}
+.sprite-u3 {
+	background-position: 0 -48px;
+}
+.sprite-u1 {
+	background-position: -48px -48px;
+}
+.sprite-u4 {
+	background-position: -96px -48px;
+}
+.sprite-l {
+	background-position: -144px -48px;
+}
+.sprite-- {
+	background-position: -192px -48px;
+}
+.sprite-0 {
+	background-position: -240px -96px;
+}
+
+.WinMessage {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: 4em;
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+.WinMessage button {
+	font-size: 0.5em;
+	margin-top: 0.5em;
+	padding: 0.25em;
+}
+
+.fade-appear {
+	opacity: 0.01;
+}
+.fade-appear.fade-appear-active {
+	opacity: 1;
+	transition: opacity .35s ease-in;
+}
+
+.fade-leave {
+	opacity: 1;
+}
+.fade-leave.fade-leave-active {
+	opacity: 0.01;
+	transition: opacity .25s ease-in;
+}
+
+.rotate90cw-leave {
+	display: none;
+}
+.rotate90cw-leave.rotate90cw-leave-active {
+}
+.rotate90cw-enter {
+	transform: rotate(-90deg);
+}
+.rotate90cw-enter.rotate90cw-enter-active {
+	transform: rotate(0deg);
+	transition: transform .1s;
+}
